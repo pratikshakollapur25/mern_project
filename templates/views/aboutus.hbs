@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABOUT US</title>
+    <link rel="stylesheet" href="about_us.css">
+    <style>
+        .ab{
+    position: relative;
+    text-align: center;
+}
+.ab img{
+   width: 100%;
+   height: 50%;
+}
+
+.text{
+    position: absolute;
+    top: 40%;
+    left: 60%;
+    color: white;
+    transform: translate(-50%,20%);
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  .II2{ 
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+  .I3{
+    {{!-- border: 1px solid #d64a4a; --}}
+    padding: 20px;
+    text-align: center;
+  }
+  .I3 img{
+    max-width: 500px;
+  }
+  .redesign{
+    display:flex;
+    flex-direction:column;
+  }
+
+    </style>
+</head>
+<body>
+    {{>header}}
+    <div>
+    <div class="ab"> <img src="Ab.jpg"  alt="top">
+   <h1 class="text">INDIA'S LARGEST SCHOLARSHIP PLATFORM<br>
+          Connecting Scholarship Seekers with Scholarship Providers</h1>
+    </div>
+    <div class="container">
+        <div class="redesign">
+        <div class="I3">
+            <img  src="A1.jpg" >
+        </div>
+        <div class="top">
+            <h1>About Buddy4Study
+                A large segment of India’s potential workforce is unemployable. With 76.04% literacy rate and an increasing number of dropouts failing to enrol or complete any form of higher education,
+                 the situation is worrying. 
+                Financial constraints, lack of know-how about education funding schemes are some of the some of the key contributors to this effect.<br>
+                Buddy4Study, since 2011, is endeavouring to bridge the gap between scholarship providers and scholarship seekers. 
+                As India’s largest scholarship listing portal, 
+                we help more than 1 million students by connecting the right scholarships with the right students. 
+                Backed by its robust scholarship search engine,
+                 it is the only platform in the country that allows both seekers and scholarship providers to access curated scholarship information across the globe.</h1>
+        </div></div>
+
+        <div class="II2">
+        <div class="I3">
+          <img src="A2.jpg" alt="Bottom Image 1">
+          <div class="section-content">
+            <h1>We are
+                India’s largest scholarship network with the vision to make quality education accessible for all.
+                 A brainchild of IIT, IIM, and BITS Pilani alumni, Buddy4Study aggregates global scholarship information.</h1>
+
+          </div>
+          </div>
+        <div class="I3">
+          <img src="A3.jpg" alt="Bottom Image 2">
+          <div class="section-content">
+            <h1>We do
+                We provide easy access to scholarships with end-to-end application support to seekers 
+                and end-to-end management and monitoring of scholarship programs to providers</h1>
+          </div>
+        </div>
+        </div>
+      </div>
+
+    </div>
+</body>
+</html>

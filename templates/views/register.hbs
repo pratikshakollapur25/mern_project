@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>register</title>
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'PT Sans', sans-serif;
+}
+.cont2{
+    display: flex;
+    height: 600px;
+    width: 900px;
+    border: 1px solid black;
+    margin: auto;
+    margin-top: 100px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16),0 3px 6px rgba(0,0,0,0.23);
+}
+
+.form1{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    align-items: center;
+    background-color: whitesmoke;
+
+}
+
+.form1 h1{
+    font-size: 2rem;
+    margin: 40px;
+}
+
+
+.inputbox{
+    padding: 5px;
+    width: 300px;
+    border: 1px solid silver;
+    outline: none;
+    border-radius: 20px;
+    margin-bottom: 20px; 
+}
+
+.reg-btn{
+    width: 300px;
+    padding: 8px 0;
+    border: none;
+    background-color:#ffcd38;
+    font-size: 18px;
+    color: #fafafa;
+    text-transform: uppercase;
+    border-radius: 20px;
+    margin-bottom: 50px;
+    font-family: 'PT Sans', sans-serif;
+    }
+
+/* Right side img */
+.side1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+
+.side1 img{
+    width: 449px;
+    height: 596px;
+
+}
+
+button[type="submit"]:hover {
+    background-color: #f5d05f;
+}
+    </style>
+</head>
+<body>
+    {{>header}}
+    <div class="cont2">
+
+        <form action="/register"  id="registration-form" method="POST" class="form1">
+    
+                <h1>Register</h1>
+
+                <div class="text-area">
+                    <label for="firstname">Username</label><br>
+                    <input type="text" class="inputbox"  name="firstname" required>
+                </div>
+    
+                <div class="text-area">
+                    <label for="email">Email</label><br>
+                    <input type="email" class="inputbox"  name="email" required>
+                </div>
+    
+                <div class="text-area">
+                    <label for="password">Password</label><br>
+                    <input type="password" class="inputbox"  name="password" required>
+                </div>
+    
+                <div class="text-area">
+                    <label for="confirmpassword">Confirm Password</label><br>
+                    <input type="password" class="inputbox"  name="confirmpassword" required>
+                </div>
+    
+                <div class="text-area">
+                    <label for="phno">Phone Number</label><br>
+                    <input type="number" class="inputbox"  name="phone">
+                </div>
+    
+                <div class="text-area">
+                    <label>Gender</label>
+                        <input type="radio" id="m" name="gender" value="m">
+                        <label for="male">Male</label>
+                        <input type="radio" id="f" name="gender" value="f">
+                        <label for="female">Female</label><br>
+                </div>
+    
+                <div>
+                    <button type="submit" value="submit" class="reg-btn">Register</button>
+                </div>
+        </form> 
+
+        <div class="side1">
+            <img src="friend-student-graduate-young.jpg" >
+        </div>
+</div>
+</body>
+</html>

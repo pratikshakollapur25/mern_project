@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="Stylesheet" href="css/style.css">
+</head>
+<body>
+     {{>header}}
+    <div class="text">
+    <ul class="form">
+      <h1 id="textm">India's Largest Scholarship Platform</h1>
+      <br>
+          <form id="courseForm">
+            <li>
+        <label for="courseType">Select Course:</label>
+        <select id="courseType" name="courseType">
+            <option value="undergraduate">Undergraduate</option>
+            <option value="postgraduate">Postgraduate</option>
+        </select></li>
+
+        <li><label>Your Gender</label>
+          <select name="gender" id="gender">
+            <option >Select Gender</option>
+            <option>Female</option>
+            <option>Male</option></select></li>
+
+            <li><label>Your Country</label>
+            <select name="foreign" id="foreign">
+                <option>Select Country </option>
+                <option>Study Abroad</option>
+                <option>India</option></select></li>
+
+        <button id="butt" type="button" onclick="redirectToCourse()">Submit</button>
+    </form>
+          
+    </ul>
+
+    <div class="IMG-MAIN" >
+      <img id="imgg" src="main_girl.png"> 
+    </div>
+    </div>
+
+
+
+  <div class="h"><hr></div>
+
+  <div class="D">
+    <div class="D2">LIVE Scholarships on our platform</div>
+      <div class="D4">
+        <img id="slide" src="d1.webp" alt="Image 1">
+      </div>
+</div>
+
+  <div class="h"><hr></div>
+
+  <div class="E">
+    <h2>Find the best-fit Scholarships</h2>
+  <div class="grid-container">
+    <div class="grid-item">
+      <img src="e1.jpg" alt="Image 1">
+      <h1>Means Based Scholarships</h1>
+    </div>
+    <div class="grid-item">
+      <img src="e2.jpg" alt="Image 2">
+      <h1>Merit Based Scholarships</h1>
+    </div>
+    <div class="grid-item">
+      <img src="e3.jpg" alt="Image 3">
+      <h1>Girl Scholarships</h1>
+    </div>
+    <div class="grid-item">
+      <img src="e4.jpg" alt="Image 4">
+      <h1>School Scholarships</h1>
+    </div>
+    <div class="grid-item">
+      <img src="e5.jpg" alt="Image 5">
+      <h1>College Scholarships</h1>
+    </div>
+    <div class="grid-item">
+      <img src="e6.jpg" alt="Image 6">
+      <h1>International Scholarships</h1>
+    </div>
+    <div class="grid-item">
+      <img src="e7.jpg" alt="Image 7">
+      <h1>Minorities Scholarships</h1>
+    </div>
+    <div class="grid-item">
+      <img src="e8.jpg" alt="Image 8">
+      <h1>Talent Based Scholarships</h1>
+    </div>
+  </div>
+  </div>
+
+  <div class="h"><hr></div>
+
+  <div class="F">
+    <h2> How it Works</h2>
+    <div class="grid-container">
+      <div class="grid-item">
+        <img src="f1.jpg" alt="Image 1">
+        <h1>Register and create your profile</h1><br/>
+          <h3>Provide some basic details super-quick and get registered with us.</h3>
+      </div>
+      <div class="grid-item">
+        <img src="f2.jpg" alt="Image 2">
+        <h1>Get notified for<br>matching scholarships</h1><br/>
+          <h3>Get instant notification as soon as any scholarship matches your profile.</h3>
+      </div>
+      <div class="grid-item">
+        <img src="f3.jpg" alt="Image 3">
+        <h1>Apply for scholarships</h1><br/>
+          <h3>Apply for scholarships according to your need and eligibility.</h3>
+      </div>
+      <div class="grid-item">
+        <img src="f4.jpg" alt="Image 4">
+        <h1>Become a scholar</h1><br/>
+          <h3>Kickstart your dreams by becoming a scholar.</h3>
+      </div>
+    </div>
+  </div>
+
+  <div class="h"><hr></div>
+
+  <div class="G">
+    <h2>Our Partners</h2>
+    <div class="grid-container">
+      <div class="grid-item">
+        <img src="g1.png" alt="Image 1">
+        </div>
+        <div class="grid-item">
+          <img src="g2.png" alt="Image 2">
+          </div>
+          <div class="grid-item">
+            <img src="g3.png" alt="Image 3">
+            </div>
+            <div class="grid-item">
+              <img src="g4.png" alt="Image 4">
+              </div>
+              <div class="grid-item">
+                <img src="g5.png" alt="Image 5">
+                </div>
+                <div class="grid-item">
+                  <img src="g7.png" alt="Image 6">
+                  </div>
+                  <div class="grid-item">
+                    <img src="g6.png" alt="Image 7">
+                    </div>
+                    <div class="grid-item">
+                      <img src="g8.png" alt="Image 8">
+                      </div>
+      </div>
+  </div>
+
+  <div class="h"><hr></div>
+
+  <script>
+    const images = ["d1.webp", "d2.jpeg", "d3.jpeg","d4.jpeg"]; 
+const intervalTime = 3000; 
+let currentIndex = 0;
+
+function changeImage() {
+  const slide = document.getElementById("slide");
+  slide.src = images[currentIndex];
+  currentIndex = (currentIndex + 1) % images.length;
+}
+
+// Initial call to set the first image
+changeImage(6);
+
+// Start the interval to change images automatically
+setInterval(changeImage, intervalTime);
+
+function redirectToCourse() {
+            var selectedCourse = document.getElementById("courseType").value;
+            
+            if (selectedCourse === "undergraduate") {
+               window.location.href = ("undergraduate") // Change this to the actual URL of the undergraduate page
+            } else if (selectedCourse === "postgraduate") {
+                window.location.href = "postgraduate"; // Change this to the actual URL of the postgraduate page
+            }
+        }
+  </script>
+
+</body>
+</html>
+
