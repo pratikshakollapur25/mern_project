@@ -5,11 +5,22 @@ const app = express();
 const hbs = require ("hbs");
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
-const session = require('express-session');
-const PORT = 8001;
+// const session = require('express-session');
+// const crypto = require('crypto');
+ const PORT = 8001;
 
 
 const port = process.env.PORT || 8001;
+
+// // Generate a random secret key
+// const secretKey = crypto.randomBytes(64).toString('hex');
+
+// // Use the generated secret key in your express-session configuration
+// app.use(session({
+//   secret: secretKey,
+//   resave: true,
+//   saveUninitialized: true
+// }));
 
 const static_path = path.join(__dirname, "../public");
 const template_path = path.join(__dirname, "../templates/views");
@@ -128,6 +139,7 @@ app.get("/login", (req,res) => {
 
        if(useremail.password === password)
        {
+        req.session.user = useremail;
          res.status(201).render("index");
        }
        else{
